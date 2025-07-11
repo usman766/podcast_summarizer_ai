@@ -8,7 +8,7 @@ export const API_ENDPOINTS = {
 // Environment Variables
 export const ENV_VARS = {
   LISTEN_NOTES_API_KEY: process.env.LISTEN_NOTES_API_KEY || '',
-  GEMINI_API_KEY: 'AIzaSyALqLO2zR461NRf5d_pkBFUqX7suuJHzN8',
+  GEMINI_API_KEY: process.env.GEMINI_API_KEY || '',
   MONGODB_URI: process.env.MONGODB_URI || '',
   MONGODB_DB_NAME: process.env.MONGODB_DB_NAME || 'podcast_summarizer',
 } as const;
@@ -19,7 +19,7 @@ export const UI_CONSTANTS = {
   MAX_DESCRIPTION_LENGTH: 200,
   EPISODES_PER_PAGE: 10,
 } as const;
-  
+
 // Error Messages
 export const ERROR_MESSAGES = {
   API_KEY_MISSING: 'API key is missing. Please check your environment variables.',
